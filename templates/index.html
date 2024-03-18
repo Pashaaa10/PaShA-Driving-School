@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+        <h1>Pasul tau catre independenta rutiera!</h1>
+        <div class="buttons-container">
+            <button onclick="location.href='{{ url_for('afisare_cursant') }}'">Cursanti</button>
+            <button onclick="location.href='{{ url_for('afisare_instructor') }}'">Instructori</button>
+            <h2>Statistici de zi cu zi</h2>
+            <button onclick="location.href='{{ url_for('statistici_simple') }}'">apasa aici</button>
+            <h2>Pentru curiosi</h2>
+            <button onclick="location.href='{{ url_for('statistici_complexe') }}'">apasa aici :D</button>
+        </div>
+    </div>
+    <p><a href="https://youtu.be/8WwvxiIfeKo?si=IrMpS9e9g8L7jMh6">Hazul nostru</a></p>
+</body>
+</html>

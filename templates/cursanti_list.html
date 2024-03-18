@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+    <title>Lista Cursanti</title>
+</head>
+<body>
+    <h1>Lista Cursanti</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nume</th>
+                <th>Prenume</th>
+                <th>CNP</th>
+                <th>Telefon</th>
+                <th>Adresa</th>
+                <th>email</th>
+                <th>sex</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cursant in cursanti %}
+                <tr>
+                    <td>{{ cursant[1] }}</td>
+                    <td>{{ cursant[2] }}</td>
+                    <td>{{ cursant[3] }}</td>
+                    <td>{{ cursant[4] }}</td>
+                    <td>{{ cursant[5] }}</td>
+                    <td>{{ cursant[6] }}</td>
+                    <td>{{ cursant[7] }}</td>
+                    <td>
+                        <a href="{{ url_for('update_cursant', cursant_id = cursant[0]) }}">Editare</a>
+                        <a href="{{ url_for('delete_cursant', cursant_id = cursant[0]) }}">Stergere</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/add_cursant">Adauga Cursant</a>
+</body>
+</html>

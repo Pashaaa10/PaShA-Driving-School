@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Actualizeaza Instructor</title>
+</head>
+<body>
+    <h1>Actualizeaza Instructor</h1>
+    <form action="{{ url_for('update_instructor', instructor_id=instructor['InstructorID']) }}" method="post">
+        <label for="nume">Nume:</label>
+        <input type="text" id="nume" name="nume" value="{{ instructor[1] }}"><br>
+        <label for="prenume">Prenume:</label>
+        <input type="text" id="prenume" name="prenume" value="{{ instructor[2] }}"><br>
+        <label for="cnp">CNP:</label>
+        <input type="text" id="cnp" name="cnp" value="{{ instructor[3] }}"><br>
+        <label for="telefon">Telefon:</label>
+        <input type="text" id="telefon" name="telefon" value="{{ instructor[4] }}"><br>
+        <label for="email">email:</label>
+        <input type="text" id="email" name="email" value="{{ instructor[5] }}"><br>
+        <input type="submit" value="Actualizează">
+    </form>
+</body>
+</html>

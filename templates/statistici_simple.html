@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+    <title>Statistici Simple</title>
+</head>
+<body>
+    <h1>Statistici Simple</h1>
+    <ul>
+        {% for result in statistici_result_simple %}
+            <li>{{ result[0] }}</li>
+            <li>{{ result[1] }}</li>
+            <li>{{ result[2] }}</li>
+            <li>{{ result[3] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

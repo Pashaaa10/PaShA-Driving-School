@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+    <title>Adauga Cursant</title>
+</head>
+<body>
+    <h1>Adauga Cursant</h1>
+    <form action="{{ url_for('add_cursant') }}" method="post">
+        <label for="nume">Nume:</label>
+        <input type="text" id="nume" name="nume"><br>
+        <label for="prenume">Prenume:</label>
+        <input type="text" id="prenume" name="prenume"><br>
+        <label for="cnp">CNP:</label>
+        <input type="text" id="cnp" name="cnp"><br>
+        <label for="telefon">Telefon:</label>
+        <input type="text" id="telefon" name="telefon"><br>
+        <label for="adresa">Adresa:</label>
+        <input type="text" id="adresa" name="adresa"><br>
+        <label for="email">email:</label>
+        <input type="text" id="email" name="email"><br>
+        <label for="sex">Sex (M/F):</label>
+        <input type="text" id="sex" name="sex"><br>
+        <input type="submit" value="Adaugă">
+    </form>
+</body>
+</html>
